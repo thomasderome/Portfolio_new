@@ -1,25 +1,17 @@
 "use client";
-import React from "react";
+import * as React from "react";
+import { Pages } from "./page_data";
+import {ComponentType} from "react";
 
 export default function Main_Frame() {
+    const [Page_render, set_page_render] = React.useState<ComponentType >(() => Pages[0].element);
+
     return (
-        <div className="relative flex flex-col text-xl text-(--color-font) ml-2 mr-2 max-w-[140vh]
+        <div className="cathodic_effect flex flex-col text-xl text-(--color-font) ml-2 mr-2 max-w-[140vh]
                 after:content-['']
                 after:absolute
                 after:inset-0
                 after:pointer-events-none">
-            <style>{`
-                .relative::after {
-                    background: 
-  /* Lignes horizontales */
-  repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.3) 0px,
-    rgba(0, 0, 0, 0.3) 1px,
-    transparent 1px,
-    transparent 2px
-  );
-                }`}</style>
             <div className="flex">
                 <span>╔</span>
                 <span>═══</span>
@@ -29,8 +21,19 @@ export default function Main_Frame() {
             </div>
             <div className="flex bg-(--bg-terminal) ml-1 max-w-259 mr-1" >
                 <Selector>
-                    <Button_select>Accueil</Button_select>
+                    {Pages.map((menu) => {
+                        return (
+                            <Button_select key={menu.name}
+                                           onClick={() => set_page_render(() => menu.element)}
+                            >
+                                {menu.name}
+                            </Button_select>
+                        );
+                    })}
                 </Selector>
+                <div>
+                    <Page_render/>
+                </div>
             </div>
         </div>
     );
@@ -44,8 +47,11 @@ function Selector( { children } : Readonly<{ children: React.ReactNode; }>) {
     );
 }
 
-function Button_select( { children } : Readonly<{ children: React.ReactNode; }>) {
+function Button_select( { children,  onClick} : Readonly<{ children: React.ReactNode; onClick: () => void; }>) {
     return (
-        <button className="hover:bg-(--color-font) hover:text-black h-10 mr-2 w-full">{children}</button>
+        <button className="hover:bg-(--color-font) hover:text-black h-10 mr-2 w-full"
+                onClick={onClick}>
+            {children}
+        </button>
     );
 }
