@@ -1,9 +1,7 @@
-"use client";
+'use client';
 
-import Main_Frame from "@/components/main_frame/main_frame";
+import Main_Frame from '@/components/main_frame/main_frame';
 
 export default function Home() {
-  return (
-      <Main_Frame />
-  );
+  return <Main_Frame />;
 }

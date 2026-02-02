@@ -1,14 +1,13 @@
-import React from "react";
+import React from 'react';
 
-interface Button_interface extends React.HTMLProps<HTMLButtonElement> {
-    children: React.ReactNode;
+interface Button_interface extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
 }
 
-export default function Button_select( { children,  ...props} : Button_interface) {
-    return (
-        <button className="hover:bg-(--color-font) hover:text-black h-10 mr-2 w-full"
-                {...props}>
-            {children}
-        </button>
-    );
+export default function Button_select({ children, ...props }: Button_interface) {
+  return (
+    <button className="mr-2 h-10 w-full hover:bg-(--color-font) hover:text-black" {...props}>
+      {children}
+    </button>
+  );
 }

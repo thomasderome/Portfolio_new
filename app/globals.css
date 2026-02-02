@@ -1,10 +1,12 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
 
   --color-font: #3f0;
   --color-second: #0f4f01;
@@ -26,15 +28,15 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
 }
 
 .cathodic_effect::after {
   background: repeating-linear-gradient(
-          0deg,
-          rgba(0, 0, 0, 0.3) 0px,
-          rgba(0, 0, 0, 0.3) 1px,
-          transparent 1px,
-          transparent 2px
+    0deg,
+    rgba(0, 0, 0, 0.3) 0px,
+    rgba(0, 0, 0, 0.3) 1px,
+    transparent 1px,
+    transparent 2px
   );
 }
