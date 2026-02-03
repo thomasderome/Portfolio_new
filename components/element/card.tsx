@@ -1,9 +1,14 @@
 import React from 'react';
+import cn from "@/components/element/tailwind_merge"
 
 interface Card_interface extends React.HTMLProps<HTMLDivElement> {
   children: React.ReactNode;
 }
 
-export default function Card({ children, ...props }: Card_interface) {
-  return <div {...props}>{children}</div>;
+export default function Card({ children, className, ...props }: Card_interface) {
+  return (
+    <div className={cn("flex bg-(--bg-card) p-4 border-1 border-(--color-second)", className)} {...props}>
+      {children}
+    </div>
+  );
 }
