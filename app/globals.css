@@ -4,12 +4,12 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --font-mono: "VT323", monospace;
+  --font-mono: 'VT323', monospace;
 
   --color-font: #3f0;
   --color-second: #0f4f01;
   --bg-terminal: #001700;
-  --bg-card: #1a1a1aCC;
+  --bg-card: #1a1a1acc;
 }
 
 @theme inline {
@@ -50,7 +50,8 @@ body {
 }
 
 @keyframes blink {
-  from, to {
+  from,
+  to {
     color: transparent;
   }
   50% {

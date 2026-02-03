@@ -21,10 +21,17 @@ export default function Main_Frame() {
         <span>╗</span>
       </div>
       <div className="mr-1 ml-1 flex max-w-259 bg-(--bg-terminal)">
-        <Selector className={"pr-2.5"}>
+        <Selector className={'pr-2.5'}>
           {Pages.map((menu, index) => {
             return (
-              <Button key={menu.name} onClick={() => {set_page_render(() => menu.element); set_hover(index);}} className={`mb-2 ${index === Hover_button ? 'active_hbutton' : ''}`} >
+              <Button
+                key={menu.name}
+                onClick={() => {
+                  set_page_render(() => menu.element);
+                  set_hover(index);
+                }}
+                className={`mb-2 ${index === Hover_button ? 'active_hbutton' : ''}`}
+              >
                 {menu.name}
               </Button>
             );
