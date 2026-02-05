@@ -1,11 +1,14 @@
 'use client';
 import React, { ComponentType, use, useEffect } from 'react';
+import { useIsMobile } from "@/hooks/use-mobile";
 
 import { Pages } from './page_data';
 import Button from '@/components/element/button';
 import Selector from '@/components/element/selector';
 
 export default function Main_Frame() {
+  const isMobile = useIsMobile();
+
   const [Page_render, set_page_render] = React.useState<ComponentType>(() => Pages[0].element);
   const [Hover_button, set_hover] = React.useState(0);
 
@@ -14,14 +17,14 @@ export default function Main_Frame() {
       <div className="flex">
         <span>╔</span>
         <span>═══</span>
-        <span className="pr-1 pl-1">Tefdsfsfxt</span>
+        <span className="pr-1 pl-1">Portfolio</span>
         <span className="max-w-220 overflow-hidden">
           ═══════════════════════════════════════════════════════════════════════════════════════════════════
         </span>
         <span>╗</span>
       </div>
-      <div className="mr-1 ml-1 flex max-w-259 bg-(--bg-terminal)">
-        <Selector className={'pr-2.5'}>
+      <div className={`mr-1 ml-1 max-w-259 bg-(--bg-terminal) ${isMobile ? "": "flex"}`}>
+        <Selector className={'pr-2.5'} ismobile={isMobile}>
           {Pages.map((menu, index) => {
             return (
               <Button
