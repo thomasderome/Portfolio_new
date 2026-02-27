@@ -33,7 +33,7 @@ export default function Contact_page() {
                             Your message:
                             <textarea
                                 name="message"
-                                className={'h-72 w-150 resize-none bg-green-900 rounded-md'}
+                                className={'h-72 w-150 resize-none rounded-md bg-green-900'}
                                 required
                             ></textarea>
                         </label>
