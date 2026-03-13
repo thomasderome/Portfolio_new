@@ -1,6 +1,9 @@
 import React from 'react';
+import { useGetTranslation } from '@/hooks/translation';
 
-export default function about_me() {
+export default function About_me() {
+    const translation = useGetTranslation();
+
     const birthDate = new Date('09/02/2007');
     const now = new Date();
     let age = now.getFullYear() - birthDate.getFullYear();
@@ -18,11 +21,7 @@ export default function about_me() {
             </h1>
             <div>
                 <span className={'text-sm'}>
-                    I have always been passionate about computers, and I started programming by
-                    working on various projects in different languages. Over the years, I have been
-                    able to develop and improve my technical skills through self-taught passion. Now
-                    at Epitech, which fits in with my learning philosophy. I am curious, enjoy
-                    working in a team, and love to learn.
+                    {translation?.about_me?.presentation}
                 </span>
             </div>
         </div>

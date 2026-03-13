@@ -1,16 +1,20 @@
+import { useGetTranslation } from '@/hooks/translation';
+
 interface interface_data {
-    Languages: string[];
-    Frameworks: string[];
-    Environment: string[];
+    languages: string[];
+    frameworks: string[];
+    environment: string[];
 }
 
 const skill_data: interface_data = {
-    Languages: ['Python', 'Typescript', 'Javascript', 'HTML', 'CSS'],
-    Frameworks: ['React', 'NextJS', 'ExpressJS', 'TailwindCSS', 'FastApi', 'Discord.py'],
-    Environment: ['Docker', 'MySQL', 'NodeJS'],
+    languages: ['Python', 'Typescript', 'Javascript', 'HTML', 'CSS'],
+    frameworks: ['React', 'NextJS', 'ExpressJS', 'TailwindCSS', 'FastApi', 'Discord.py'],
+    environment: ['Docker', 'MySQL', 'NodeJS'],
 };
 
-function gen_tree() {
+function Gen_tree() {
+    const translation = useGetTranslation();
+
     const character = {
         line_horizontal: '─',
         line_vertical: '│',
@@ -25,8 +29,7 @@ function gen_tree() {
     const num_keys: number = keys.length;
 
     keys.forEach((skill_key: keyof interface_data, index_key: number) => {
-        result += `${index_key < num_keys - 1 ? character.jonction : character.right}${character.line_horizontal.repeat(2)} ${skill_key}/\n`;
-
+        result += `${index_key < num_keys - 1 ? character.jonction : character.right}${character.line_horizontal.repeat(2)} ${translation?.skills[skill_key]}/\n`;
         const len: number = skill_data[skill_key].length;
 
         skill_data[skill_key].forEach((item: string, index: number) => {
@@ -44,5 +47,5 @@ function gen_tree() {
 }
 
 export default function skills() {
-    return <pre className={'text-xs'}>{`${gen_tree()}`}</pre>;
+    return <pre className={'text-xs'}>{`${Gen_tree()}`}</pre>;
 }

@@ -1,13 +1,15 @@
 'use client';
 import React, { ComponentType } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useGetTranslation } from '@/hooks/translation';
 
-import { Pages } from './page_data';
+import { Pages } from '@/data/page_data';
 import Button from '@/components/element/button';
 import Selector from '@/components/element/selector';
 
 export default function Main_Frame() {
     const isMobile = useIsMobile();
+    const translation = useGetTranslation();
 
     const [Page_render, set_page_render] = React.useState<ComponentType>(() => Pages[0].element);
     const [Hover_button, set_hover] = React.useState(0);
@@ -36,7 +38,7 @@ export default function Main_Frame() {
                                 className={`mb-2 ${index === Hover_button ? 'active_hbutton' : ''}`}
                                 ismobile={isMobile}
                             >
-                                {menu.name}
+                                {translation?.navigation[menu.name]}
                             </Button>
                         );
                     })}
