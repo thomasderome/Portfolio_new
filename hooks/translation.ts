@@ -1,3 +1,5 @@
+'use client'
+
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import fr from "@/public/i18n/fr.json";
@@ -8,7 +10,7 @@ export function useGetTranslation(): Record<string, any> | null {
     const searchParams = useSearchParams();
     const lang_select = searchParams.get('lang') ?? default_lang;
 
-    const [traduction, setTraduction] = useState<Record<string, string> | null>(null);
+    const [traduction, setTraduction] = useState<Record<string, any> | null>(null);
 
     useEffect(() => {
         if (lang_select == default_lang) {
@@ -22,15 +24,8 @@ export function useGetTranslation(): Record<string, any> | null {
                 setTraduction(translation);
             })
             .catch(() => {
-                console.log("Lang sleect does not exist");
-                fetch('/i18n/fr.json')
-                    .then((response) => response.json())
-                    .then((translation) => {
-                        setTraduction(translation);
-                    })
-                    .catch(() => {
-                        alert('Error loading lang');
-                    });
+                console.log("Lang select does not exist");
+                setTraduction(fr);
             })
     }, [lang_select]);
 
