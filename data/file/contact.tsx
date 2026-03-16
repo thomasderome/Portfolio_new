@@ -11,7 +11,7 @@ export default function Contact() {
     return (
         <div className={'flex flex-col'}>
             <h1>Contact:</h1>
-            <div className={`flex ${is_mobile ? "flex-col" : "flex-row"}`}>
+            <div className={`flex ${is_mobile ? 'flex-col' : 'flex-row'}`}>
                 <Button onClick={() => (location.href = 'https://github.com/thomasderome')}>
                     [Github]
                 </Button>

@@ -20,9 +20,7 @@ export default function About_me() {
                 &gt; Thomas_Derome<span className={'blink text-xl'}>█</span>
             </h1>
             <div>
-                <span className={'text-sm'}>
-                    {translation?.about_me?.presentation}
-                </span>
+                <span className={'text-sm'}>{translation?.about_me?.presentation}</span>
             </div>
         </div>
     );

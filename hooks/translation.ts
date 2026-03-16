@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import fr from "@/public/i18n/fr.json";
+import fr from '@/public/i18n/fr.json';
 
 export function useGetTranslation(): Record<string, any> | null {
-    const default_lang = "fr";
+    const default_lang = 'fr';
 
     const searchParams = useSearchParams();
     const lang_select = searchParams.get('lang') ?? default_lang;
@@ -24,9 +24,9 @@ export function useGetTranslation(): Record<string, any> | null {
                 setTraduction(translation);
             })
             .catch(() => {
-                console.log("Lang select does not exist");
+                console.log('Lang select does not exist');
                 setTraduction(fr);
-            })
+            });
     }, [lang_select]);
 
     return traduction;

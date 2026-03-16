@@ -4,7 +4,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 import Button from '@/components/element/button';
 import Selector from '@/components/element/selector';
-import { Pages } from '@/components/main_frame/page_data';
+import { Pages } from '@/data/page_data';
 
 export default function Contact_page() {
     const isMobile = useIsMobile();

@@ -12,10 +12,10 @@ export default interface project_interface {
 export const project_list: project_interface[] = [
     {
         icon: '|-[=o=]',
-        title: "",
-        description: "",
-        tech: ["dsdqs"],
-        github: "",
+        title: '',
+        description: '',
+        tech: ['dsdqs'],
+        github: '',
         img: [],
         demo: null,
     },
