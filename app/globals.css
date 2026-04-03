@@ -58,3 +58,29 @@ body {
         color: var(--color-font);
     }
 }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--bg-terminal);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-second);
+    border-radius: 10px;
+    height: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-second);
+    border-radius: 10px;
+    height: 5px;
+}
