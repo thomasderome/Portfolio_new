@@ -1,5 +1,9 @@
+"use client";
+
 import React from 'react';
 import { useGetTranslation } from '@/hooks/translation';
+import TextType from '@/components/effects/TextType';
+import DecryptedText from '@/components/effects/DecryptedText';
 
 export default function About_me() {
     const translation = useGetTranslation();
@@ -16,11 +20,30 @@ export default function About_me() {
 
     return (
         <div className={'flex max-w-170 flex-col'}>
-            <h1 className={'text-2xl font-bold'}>
-                &gt; Thomas_Derome<span className={'blink text-xl'}>█</span>
-            </h1>
+            <div className={'text-2xl'}>
+                &gt;{' '}
+                <TextType
+                    text={['Thomas_DEROME']}
+                    typingSpeed={100}
+                    pauseDuration={5000}
+                    showCursor
+                    cursorCharacter="█"
+                    deletingSpeed={50}
+                    cursorBlinkDuration={0.75}
+                    loop={false}
+                    className="font-[--font-mono]"
+                />
+            </div>
             <div>
-                <span className={'text-sm'}>{translation?.about_me?.presentation}</span>
+                <DecryptedText
+                    text={translation?.about_me?.presentation ?? 'Loading...'}
+                    animateOn="view"
+                    revealDirection="start"
+                    sequential
+                    useOriginalCharsOnly={false}
+                    speed={0.7}
+                    className="font-[--font-mono]"
+                />
             </div>
         </div>
     );
