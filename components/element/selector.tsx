@@ -10,7 +10,7 @@ export default function Selector({ children, className, ismobile, ...props }: Se
     return (
         <nav
             className={cn(
-                `mt-1 ml-3 flex border-(--color-second) ${ismobile ? 'overflow-x-scroll overflow-y-hidden border-b' : 'mb-2 h-100 w-33 flex-col border-r'}`,
+                `mt-1 ml-3 flex border-(--color-second) ${ismobile ? 'overflow-x-scroll overflow-y-hidden border-b' : 'mb-2 w-33 flex-col border-r'}`,
                 className
             )}
             {...props}
