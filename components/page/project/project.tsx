@@ -48,7 +48,7 @@ export default function Project() {
                                         target="_blank"
                                         className="px-1 py-1 text-sm hover:bg-(--color-font) hover:text-black"
                                     >
-                                        GITHUB
+                                        &gt; GITHUB
                                     </a>
                                 )}
                                 {project.demo && (
@@ -57,7 +57,7 @@ export default function Project() {
                                         target="_blank"
                                         className="px-1 py-1 text-sm hover:bg-(--color-font) hover:text-black"
                                     >
-                                        DEMO
+                                        &gt; DEMO
                                     </a>
                                 )}
                             </div>
