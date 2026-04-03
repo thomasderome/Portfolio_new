@@ -47,5 +47,5 @@ function Gen_tree() {
 }
 
 export default function skills() {
-    return <pre className={'text-xs'}>{`${Gen_tree()}`}</pre>;
+    return <pre className={'text-sm'}>{`${Gen_tree()}`}</pre>;
 }
