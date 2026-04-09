@@ -15,7 +15,7 @@ export default function Project() {
 
     return (
         <Card
-            className={`ml-3 flex h-150 w-220 flex-col overflow-y-scroll border-none ${is_mobile ? 'max-h-135 max-w-170' : ''}`}
+            className={`ml-3 flex h-120 w-220 flex-col overflow-y-scroll border-none ${is_mobile ? 'max-h-135 max-w-170' : ''}`}
         >
             <div className="flex flex-col gap-6">
                 {project_list.map((project, index) => (
