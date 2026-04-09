@@ -6,7 +6,9 @@ import { Suspense } from 'react';
 export default function Home() {
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            <Main_Frame />
+            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                <Main_Frame />
+            </div>
         </Suspense>
     );
 }
