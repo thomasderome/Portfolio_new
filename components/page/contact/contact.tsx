@@ -1,4 +1,3 @@
-'use client';
 import React, { ComponentType } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 

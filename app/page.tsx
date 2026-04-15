@@ -1,5 +1,3 @@
-'use client';
-
 import Main_Frame from '@/components/main_frame/main_frame';
 import { Suspense } from 'react';
 

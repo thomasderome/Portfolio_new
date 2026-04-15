@@ -1,16 +1,16 @@
-'use client';
-
-import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import fr from '@/public/i18n/fr.json';
 
 export function useGetTranslation(): Record<string, any> | null {
     const default_lang = 'fr';
 
-    const searchParams = useSearchParams();
-    const lang_select = searchParams.get('lang') ?? default_lang;
-
+    const [lang_select, setLangSelect] = useState(default_lang);
     const [traduction, setTraduction] = useState<Record<string, any> | null>(null);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        setLangSelect(params.get('lang') ?? default_lang);
+    }, []);
 
     useEffect(() => {
         if (lang_select == default_lang) {

@@ -1,4 +1,5 @@
 import './globals.css';
+import Settings from '@/components/settings';
 
 export default function RootLayout({
     children,
@@ -7,7 +8,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className="font-[--font-mono]">
-            <body className="antialiased">{children}</body>
+            <body className="antialiased">
+                <Settings/>
+                {children}
+            </body>
         </html>
     );
 }

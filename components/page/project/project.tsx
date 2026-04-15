@@ -1,17 +1,18 @@
-'use client';
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '@/components/element/card';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { project_list } from '@/data/project';
-import { useSearchParams } from 'next/navigation';
 
 export default function Project() {
     const default_lang = 'fr';
     const is_mobile = useIsMobile();
 
-    const searchParams = useSearchParams();
-    const lang_select = searchParams.get('lang') ?? default_lang;
+    const [lang_select, setLangSelect] = useState(default_lang);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        setLangSelect(params.get('lang') ?? default_lang);
+    }, []);
 
     return (
         <Card
