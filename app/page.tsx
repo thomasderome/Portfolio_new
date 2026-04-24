@@ -3,12 +3,13 @@
 import Main_Frame from '@/components/main_frame/main_frame';
 import { Suspense } from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import CyberBackground from '@/components/effects/CyberBackground';
 
 export default function Home() {
     const mobile = useIsMobile();
     return (
         <Suspense fallback={<div>Loading...</div>}>
-            
+            <CyberBackground />
             <div
                 className={
                     mobile
