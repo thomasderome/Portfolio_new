@@ -1,13 +1,16 @@
 {
     "navigation": {
         "about_me": "A propos",
-        "project": "Projets"
+        "project": "Projets",
+        "contact": "Contacter"
+    },
+    "contact":  {
+        "contact": "Contacter-moi",
+        "send": "Envoyer",
+        "email": "votre"
     },
     "about_me": {
         "presentation": "Passionné par l’informatique depuis toujours, j’ai commencé la programmation en faisant divers projets dans différents langages. Au fur et à mesure des années j’ai pu évoluer et améliorer mes compétences techniques par passion en autodidacte. Désormais à Epitech je suis ma philosophie de travaille afin d’approfondir mes connaissances. Je suis curieux, aime travailler en équipe et apprendre."
-    },
-    "contact": {
-        "contact_me": "Contacter-moi"
     },
     "skills": {
         "languages": "Langages",

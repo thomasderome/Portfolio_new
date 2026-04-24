@@ -1,13 +1,16 @@
 {
     "navigation": {
         "about_me": "About me",
-        "project": "Projects"
+        "project": "Projects",
+        "contact": "Contact"
+    },
+    "contact": {
+        "contact": "Contact-me",
+        "send": "Send",
+        "email": "your"
     },
     "about_me": {
         "presentation": "I have been passionate about IT for as long as I can remember. I started programming through various projects in several languages, and over the years, I have honed my technical skills as a self-taught enthusiast. Now a student at Epitech, I apply my personal work philosophy to further deepen my expertise. I am curious, a team player, and always eager to learn."
-    },
-    "contact": {
-        "contact_me": "Contact-me"
     },
     "skills": {
         "languages": "Languages",
