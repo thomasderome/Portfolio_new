@@ -2,20 +2,18 @@
 
 import React from 'react';
 import Card from '@/components/element/card';
-import { useIsMobile } from '@/hooks/use-mobile';
 import { project_list } from '@/data/project';
 import { useSearchParams } from 'next/navigation';
 
-export default function Project() {
+export default function Project({ is_mobile }: { is_mobile: boolean }) {
     const default_lang = 'fr';
-    const is_mobile = useIsMobile();
 
     const searchParams = useSearchParams();
     const lang_select = searchParams.get('lang') ?? default_lang;
-
+    console.log('tes', is_mobile);
     return (
         <Card
-            className={`ml-3 flex h-120 w-220 flex-col overflow-y-scroll border-none ${is_mobile ? 'max-h-135 max-w-170' : ''}`}
+            className={`flex flex-col overflow-y-scroll border-none ${is_mobile ? 'max-w-170' : 'ml-3 h-120 w-220'}`}
         >
             <div className="flex flex-col gap-6">
                 {project_list.map((project, index) => (

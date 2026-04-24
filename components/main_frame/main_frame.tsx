@@ -25,7 +25,9 @@ export default function Main_Frame() {
                 </span>
                 <span>╗</span>
             </div>
-            <div className={`mr-1 ml-1 max-w-259 bg-(--bg-terminal) ${isMobile ? '' : 'flex'}`}>
+            <div
+                className={`mr-1 ml-1 max-w-259 bg-(--bg-terminal) ${isMobile ? '' : 'grid grid-cols-[150px_auto]'}`}
+            >
                 <Selector className={'pr-2.5'} ismobile={isMobile}>
                     {Pages.map((menu, index) => {
                         return (
@@ -44,7 +46,7 @@ export default function Main_Frame() {
                     })}
                 </Selector>
                 <div>
-                    <Page_render />
+                    <Page_render is_mobile={isMobile} />
                 </div>
             </div>
             <div className={'flex'}>
