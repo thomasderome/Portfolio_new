@@ -7,11 +7,9 @@ import Skills from '@/data/file/skills';
 import AboutMe from '@/data/file/about_me';
 import Contact from '@/data/file/contact';
 
-export default function Page() {
-    const isMobile = useIsMobile();
-
+export default function Page({ is_mobile }: { is_mobile: boolean }) {
     return (
-        <div className={`flex ${isMobile ? 'flex-col' : ''}`}>
+        <div className={`flex ${is_mobile ? 'flex-col' : ''}`}>
             <About_me_card />
             <Skill_card />
         </div>

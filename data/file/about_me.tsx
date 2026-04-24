@@ -20,7 +20,7 @@ export default function About_me() {
 
     return (
         <div className={'flex max-w-170 flex-col'}>
-            <div className={'text-2xl'}>
+            <div className={''}>
                 &gt;{' '}
                 <TextType
                     text={['Thomas_DEROME']}

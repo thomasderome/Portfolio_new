@@ -1,7 +1,8 @@
 'use client';
-import React, { ComponentType } from 'react';
+import React from 'react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useGetTranslation } from '@/hooks/translation';
+import interface_page from '@/components/main_frame/interface_main_frame';
 
 import { Pages } from '@/data/page_data';
 import Button from '@/components/element/button';
@@ -11,7 +12,7 @@ export default function Main_Frame() {
     const isMobile = useIsMobile();
     const translation = useGetTranslation();
 
-    const [Page_render, set_page_render] = React.useState<ComponentType>(() => Pages[0].element);
+    const [Page_render, set_page_render] = React.useState<interface_page['page']>(() => Pages[0].page);
     const [Hover_button, set_hover] = React.useState(0);
 
     return (
@@ -34,7 +35,7 @@ export default function Main_Frame() {
                             <Button
                                 key={menu.name}
                                 onClick={() => {
-                                    set_page_render(() => menu.element);
+                                    set_page_render(() => menu.page);
                                     set_hover(index);
                                 }}
                                 className={`mb-2 ${index === Hover_button ? 'active_hbutton' : ''}`}
