@@ -1,8 +1,8 @@
 @import 'tailwindcss';
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
 
     --font-mono: 'VT323', monospace;
 
@@ -26,19 +26,18 @@
 
 body {
     background-color: var(--background);
-    color: var(--foreground);
     font-family: 'VT323', monospace;
 }
 
-.cathodic_effect::after {
-    background: repeating-linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.3) 0px,
-        rgba(0, 0, 0, 0.3) 1px,
-        transparent 1px,
-        transparent 2px
-    );
-}
+/*.cathodic_effect::after {*/
+/*    background: repeating-linear-gradient(*/
+/*        0deg,*/
+/*        rgba(0, 0, 0, 0.3) 0px,*/
+/*        rgba(0, 0, 0, 0.3) 1px,*/
+/*        transparent 1px,*/
+/*        transparent 2px*/
+/*    );*/
+/*}*/
 
 .blink {
     animation: blink 2s step-end infinite;
@@ -58,7 +57,6 @@ body {
         color: var(--color-font);
     }
 }
-
 
 /* width */
 ::-webkit-scrollbar {
