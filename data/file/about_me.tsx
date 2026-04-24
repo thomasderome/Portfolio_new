@@ -31,7 +31,7 @@ export default function About_me() {
                     deletingSpeed={50}
                     cursorBlinkDuration={0.75}
                     loop={false}
-                    className="font-[--font-mono]"
+                    className='font-[--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace]'
                 />
             </div>
             <div>
@@ -42,7 +42,7 @@ export default function About_me() {
                     sequential
                     useOriginalCharsOnly={false}
                     speed={0.7}
-                    className="font-[--font-mono]"
+                    className='font-[--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace]'
                 />
             </div>
         </div>
