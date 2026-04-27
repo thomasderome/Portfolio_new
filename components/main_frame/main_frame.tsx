@@ -12,7 +12,9 @@ export default function Main_Frame() {
     const isMobile = useIsMobile();
     const translation = useGetTranslation();
 
-    const [Page_render, set_page_render] = React.useState<interface_page['page']>(() => Pages[0].page);
+    const [Page_render, set_page_render] = React.useState<interface_page['page']>(
+        () => Pages[0].page
+    );
     const [Hover_button, set_hover] = React.useState(0);
 
     return (

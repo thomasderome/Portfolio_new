@@ -14,6 +14,6 @@ export const Pages: interface_page[] = [
     },
     {
         name: 'contact',
-        page: contact
-    }
+        page: contact,
+    },
 ];
