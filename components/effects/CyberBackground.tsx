@@ -45,7 +45,8 @@ export default function CyberBackground() {
         resize();
 
         // Particles (Data bits)
-        const particles: { x: number; y: number; size: number; speed: number; opacity: number }[] = [];
+        const particles: { x: number; y: number; size: number; speed: number; opacity: number }[] =
+            [];
         const particleCount = 60;
 
         for (let i = 0; i < particleCount; i++) {
@@ -60,18 +61,18 @@ export default function CyberBackground() {
 
         const draw = () => {
             ctx.clearRect(0, 0, width, height);
-            
+
             ctx.fillStyle = '#3f0';
             particles.forEach((p) => {
                 ctx.globalAlpha = p.opacity;
                 ctx.fillRect(p.x, p.y, p.size, p.size);
-                
+
                 p.y -= p.speed;
                 if (p.y < 0) {
                     p.y = height;
                     p.x = Math.random() * width;
                 }
-                
+
                 if (Math.random() > 0.99) {
                     p.opacity = Math.random() * 0.4;
                 }
@@ -91,7 +92,7 @@ export default function CyberBackground() {
     return (
         <div className="fixed inset-0 -z-20 h-screen w-screen overflow-hidden bg-[#020602]">
             {/* Grid Overlay */}
-            <div 
+            <div
                 className="absolute inset-0 opacity-[0.1]"
                 style={{
                     backgroundImage: `
@@ -103,24 +104,26 @@ export default function CyberBackground() {
             />
 
             {/* Subtle Horizontal Scanlines */}
-            <div 
-                className="absolute inset-0 pointer-events-none opacity-[0.03]"
+            <div
+                className="pointer-events-none absolute inset-0 opacity-[0.03]"
                 style={{
-                    backgroundImage: 'linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))',
+                    backgroundImage:
+                        'linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))',
                     backgroundSize: '100% 4px, 3px 100%',
                 }}
             />
-            
+
             {/* Radial Gradient for depth */}
-            <div 
+            <div
                 className="absolute inset-0"
                 style={{
-                    background: 'radial-gradient(circle at center, transparent 0%, rgba(0, 5, 0, 0.6) 70%, rgba(0, 0, 0, 0.9) 100%)'
+                    background:
+                        'radial-gradient(circle at center, transparent 0%, rgba(0, 5, 0, 0.6) 70%, rgba(0, 0, 0, 0.9) 100%)',
                 }}
             />
 
             {/* Mouse Follow Glow - Fixed Alignment */}
-            <motion.div 
+            <motion.div
                 className="pointer-events-none absolute h-[1000px] w-[1000px] opacity-[0.2]"
                 style={{
                     left: dx,
@@ -132,23 +135,20 @@ export default function CyberBackground() {
             />
 
             {/* Moving Scanline */}
-            <motion.div 
-                className="absolute left-0 right-0 h-[100px] bg-gradient-to-b from-transparent via-[#3f0] to-transparent opacity-[0.03]"
+            <motion.div
+                className="absolute right-0 left-0 h-[100px] bg-gradient-to-b from-transparent via-[#3f0] to-transparent opacity-[0.03]"
                 animate={{
                     top: ['-20%', '120%'],
                 }}
                 transition={{
                     duration: 12,
                     repeat: Infinity,
-                    ease: "linear",
+                    ease: 'linear',
                 }}
             />
 
             {/* Canvas for particles */}
-            <canvas 
-                ref={canvasRef}
-                className="absolute inset-0 pointer-events-none"
-            />
+            <canvas ref={canvasRef} className="pointer-events-none absolute inset-0" />
         </div>
     );
 }
