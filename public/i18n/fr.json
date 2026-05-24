@@ -1,6 +1,7 @@
 {
     "navigation": {
         "about_me": "A propos",
+        "parcour": "Parcours",
         "project": "Projets",
         "contact": "Contacter"
     },
@@ -8,6 +9,14 @@
         "contact": "Contacter-moi",
         "send": "Envoyer",
         "email": "votre"
+    },
+    "parcour": {
+        "epitech": "Epitech Bachelor - 1ère année",
+        "epitech_desc": "Début de mon parcours dans l'informatique",
+        "bac": "BAC Technologique",
+        "bac_desc": "Obtention du Baccalauréat avec spécialités Math & SIN (Sciences de l'Informatique et du Numérique)",
+        "lycee": "Lycée",
+        "lycee_desc": "Début de la spécialisation en informatique."
     },
     "about_me": {
         "presentation": "Passionné par l’informatique depuis toujours, j’ai commencé la programmation en faisant divers projets dans différents langages. Au fur et à mesure des années j’ai pu évoluer et améliorer mes compétences techniques par passion en autodidacte. Désormais à Epitech je suis ma philosophie de travaille afin d’approfondir mes connaissances. Je suis curieux, aime travailler en équipe et apprendre."

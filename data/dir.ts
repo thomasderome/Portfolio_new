@@ -9,6 +9,9 @@ export const Dir = {
                         type: 'folder',
                         children: {
                             'about_me.txt': '',
+                            'parcours.txt': '',
+                            'skill.txt': '',
+                            'contact.txt': '',
                         },
                     },
                 },
