@@ -23,18 +23,6 @@ export const project_list: project_interface[] = [
         demo: null,
     },
     {
-        icon: '|-[=o=]',
-        title: 'Radio stream',
-        description: {
-            fr: 'Un projet de serveur de streaming permettant de diffuser des radios web sur un ordinateur distant et de les piloter via une interface de contrôle web.',
-            en: 'A streaming server project that allows web radio stations to be streamed to a remote computer and controlled via a web interface.',
-        },
-        tech: ['Flask', 'Python', 'HTML/CSS', 'JS'],
-        github: 'https://github.com/thomasderome/Stream-radio',
-        img: [],
-        demo: null,
-    },
-    {
         icon: '[-IENT-]',
         title: 'IENT Mobile',
         description: {
@@ -43,6 +31,30 @@ export const project_list: project_interface[] = [
         },
         tech: ['Flutter', 'Dart'],
         github: 'https://github.com/thomasderome/IENT_Mobile',
+        img: [],
+        demo: null,
+    },
+    {
+        icon: '📖',
+        title: 'Alice in wonderland',
+        description: {
+            fr: "Un outil d'analyse littéraire basé sur le NLP pour extraire des statistiques (entités, thématiques, diversité lexicale) du Projet Gutenberg, doté d'une interface TUI en Rust.",
+            en: 'A NLP-based literary analysis tool to extract statistics (entities, topics, lexical diversity) from Project Gutenberg, featuring a Rust-powered TUI.',
+        },
+        tech: ['Python', 'Rust', 'Ratatui', 'NLP', 'Docker', 'Redis'],
+        github: 'https://github.com/thomasderome/Alice-in-wonderland',
+        img: [],
+        demo: null,
+    },
+    {
+        icon: '|-[=o=]',
+        title: 'Radio stream',
+        description: {
+            fr: 'Un projet de serveur de streaming permettant de diffuser des radios web sur un ordinateur distant et de les piloter via une interface de contrôle web.',
+            en: 'A streaming server project that allows web radio stations to be streamed to a remote computer and controlled via a web interface.',
+        },
+        tech: ['Flask', 'Python', 'HTML/CSS', 'JS'],
+        github: 'https://github.com/thomasderome/Stream-radio',
         img: [],
         demo: null,
     },
