@@ -35,7 +35,7 @@ export const project_list: project_interface[] = [
         demo: null,
     },
     {
-        icon: '📖',
+        icon: '[ 📖 ]',
         title: 'Alice in wonderland',
         description: {
             fr: "Un outil d'analyse littéraire basé sur le NLP pour extraire des statistiques (entités, thématiques, diversité lexicale) du Projet Gutenberg, doté d'une interface TUI en Rust.",
