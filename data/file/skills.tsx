@@ -7,9 +7,9 @@ interface interface_data {
 }
 
 const skill_data: interface_data = {
-    languages: ['Python', 'Typescript', 'Javascript', 'HTML', 'CSS'],
-    frameworks: ['React', 'NextJS', 'ExpressJS', 'TailwindCSS', 'FastApi', 'Discord.py'],
-    environment: ['Docker', 'MySQL', 'NodeJS'],
+    languages: ['C', 'Go', 'Typescript', 'Python'],
+    frameworks: ['Gin gonic', 'React', 'TailwindCSS', 'FastApi', 'Discord.py'],
+    environment: ['Docker', 'MySQL', 'Linux'],
 };
 
 function Gen_tree() {
